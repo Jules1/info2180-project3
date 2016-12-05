@@ -1,0 +1,77 @@
+<HTML>
+    <HEAD>
+        <title> CheapoMail Web Client</title>
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+        <script type="text/javascript" src="overlay.js" ></script>
+    </HEAD>
+    
+    <BODY>
+        <div id="myNav" class="overlay">
+
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        
+          <!-- Overlay content -->
+          <div class="overlay-content">
+            <a href="javascript:logIn()">Log In</a>
+            <a href="javascript:setupUser()">Set Up User</a>
+            <a href="javascript:mailBoxOpen()">Go to my Messages</a>
+          </div>
+        
+        </div>
+        <div class="main">
+            <span class="main">Cheapo Mail</span>
+            <ul>
+              <li><a href="javascript:openNav()">Enter my Mailbox</a></li>
+            </ul>
+        </div>
+        
+        <div id="login" class="hidden">
+            <a href="javascript:void(0)" class="closebtn" onclick="logIn()">&times;</a>
+            <form action='login.php' method='post'>
+                <fieldset>
+                    <legend>Log In to CheapoMail</legend>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password">
+                    <div id="lower">
+                    <p class="newUser" onclick="setupUser()">New User?</p>
+                    <input type = "submit" value="Login">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        
+        <div id="setUp" class="hidden">
+            <a href="javascript:void(0)" class="closebtn" onclick="setupUser()">&times;</a>
+            <form action='newUser.php' method="post">
+                <fieldset>
+                    <legend>Set up New User</legend>
+                    <label for='firstname'>First Name</label>
+                    <input type='text' id='firstname' name='firstname'>
+                    <label for='lastname'>Last Name</label>
+                    <input type='text' id='lastname' name='lastname'>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username">
+                    <label for="password">Create Password:</label>
+                    <input type="password" id="password" name="password">
+                    <label for="password">Confirm Password:</label>
+                    <input type="password" id="password2" name="password">
+                    <div id="lower">
+                    <input type = "submit" value="Create User">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        
+        <div id="messages">
+            <table>
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        
+        
+    </BODY>
+</HTML>
